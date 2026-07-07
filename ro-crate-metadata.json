@@ -10,7 +10,7 @@
       "conformsTo": {
         "@id": "https://w3id.org/ro/crate/1.1"
       },
-      "dateCreated": "2026-07-07T16:27:00.16343+00:00"
+      "dateCreated": "2026-07-07T16:35:16.411+00:00"
     },
     {
       "@id": "#author-irwing-s-salda-a",
@@ -290,13 +290,41 @@
       "dateCreated": "2026-07-02T04:21:18.382+00:00"
     },
     {
+      "@id": "code/executions/021_cargar-el-objeto-de-enmeval-guardado-par.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Cargar el objeto de ENMeval guardado para inspeccionar su estructura y configuraciones de hiperparámetros óptimos.",
+      "description": "Execution #21: Cargar el objeto de ENMeval guardado para inspeccionar su estructura y configuraciones de hiperparámetros óptimos.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "c093ed04b7fac6806187fcc62a8c2a34a99de8824db1b26cf87413dc6a53b3a4",
+      "dateCreated": "2026-07-07T16:30:54.059+00:00"
+    },
+    {
+      "@id": "code/executions/022_generar-los-datos-de-las-curvas-de-respu.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar los datos de las curvas de respuesta del mejor modelo MaxEnt (AICc) y visualizar en un arreglo tipo multi-panel con ggplot2, aplicando directrices estéticas de alta calidad de publicación.",
+      "description": "Execution #22: Generar los datos de las curvas de respuesta del mejor modelo MaxEnt (AICc) y visualizar en un arreglo tipo multi-panel con ggplot2, aplicando directrices estéticas de alta calidad de publicación.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "ad444ee947f9e5a5edc8b301486fa0df14b6232d74d9f8b7e5a048455f44e319",
+      "dateCreated": "2026-07-07T16:35:16.411+00:00"
+    },
+    {
       "@id": "provenance/provenance.json",
       "@type": [
         "File",
         "CreativeWork"
       ],
       "name": "Provenance Graph",
-      "description": "W3C PROV-O provenance graph with 18 edges",
+      "description": "W3C PROV-O provenance graph with 25 edges",
       "encodingFormat": "application/json",
       "conformsTo": {
         "@id": "http://www.w3.org/ns/prov"
@@ -394,6 +422,12 @@
         },
         {
           "@id": "code/executions/020_generar-mapa-de-idoneidad-usando-la-esca.R"
+        },
+        {
+          "@id": "code/executions/021_cargar-el-objeto-de-enmeval-guardado-par.R"
+        },
+        {
+          "@id": "code/executions/022_generar-los-datos-de-las-curvas-de-respu.R"
         },
         {
           "@id": "provenance/provenance.json"

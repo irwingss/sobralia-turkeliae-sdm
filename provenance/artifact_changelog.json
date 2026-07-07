@@ -1,5 +1,49 @@
 [
   {
+    "artifactId": 2780,
+    "title": "o5_response_curves.png",
+    "type": "image",
+    "totalVersions": 4,
+    "versions": [
+      {
+        "version": 1,
+        "contentHash": "23fcc2b743191134fc0c3748f8e6e16d355660bcf98989027ae1bfa16b5f1606",
+        "editSource": "baseline",
+        "editPrompt": "Versión original",
+        "aiModel": null,
+        "parentVersion": null,
+        "createdAt": "2026-07-07T16:54:26.708+00:00"
+      },
+      {
+        "version": 2,
+        "contentHash": "2ecbba65adaa14d38684b2785e59b0500df247eca270d133e7532117edd3412b",
+        "editSource": "figure_chat",
+        "editPrompt": "Cambia \"Bio número\" por su respectivo valor respecto al WorldClim",
+        "aiModel": null,
+        "parentVersion": "5e9dbb16-e64a-4916-9655-c433b37a82d6",
+        "createdAt": "2026-07-07T16:54:27.674+00:00"
+      },
+      {
+        "version": 3,
+        "contentHash": "0dc5c48cb962d79b2e730b86c52a8b79528ba1033317501f5069f80243a1c2db",
+        "editSource": "figure_chat",
+        "editPrompt": "__selection_only__",
+        "aiModel": null,
+        "parentVersion": "ae97a775-9669-40e3-9a19-85b1268d6611",
+        "createdAt": "2026-07-07T17:20:05.774+00:00"
+      },
+      {
+        "version": 4,
+        "contentHash": "a458c39bbde358968d940684d77d64f98fb4a27fe40d0ae9302e537b4dd4212c",
+        "editSource": "figure_chat",
+        "editPrompt": "Retira el título y subtitulo",
+        "aiModel": null,
+        "parentVersion": "b50a3d43-65c0-4e74-95d1-1ed0022d8c5d",
+        "createdAt": "2026-07-07T17:21:08.035+00:00"
+      }
+    ]
+  },
+  {
     "artifactId": 2645,
     "title": "o4_suitability_map_logistic.png",
     "type": "image",

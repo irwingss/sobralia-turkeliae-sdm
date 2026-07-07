@@ -1,5 +1,6 @@
 # Reproducible runtime for this research package.
 # Fija una base estable; ajusta versiones si tu análisis requiere otras.
+# Runtime capturado en producción: R 4.4.2 · OS Linux-4.19.0-gvisor-x86_64-with-glibc2.39
 FROM mambaorg/micromamba:1.5.8-jammy
 
 USER root
