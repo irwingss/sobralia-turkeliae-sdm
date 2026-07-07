@@ -1,0 +1,408 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "dateCreated": "2026-07-07T16:27:00.16343+00:00"
+    },
+    {
+      "@id": "#author-irwing-s-salda-a",
+      "@type": "Person",
+      "name": "Irwing S. Saldaña",
+      "email": "irwingssaldu@gmail.com"
+    },
+    {
+      "@id": "https://ressearchai.app",
+      "@type": "SoftwareApplication",
+      "name": "Ressearch AI Assistant"
+    },
+    {
+      "@id": "code/executions/001_limpiar-las-coordenadas-y-seleccionar-va.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Limpiar las coordenadas y seleccionar variables climáticas independientes para el modelo MaxEnt. Selecciono mediante VIF umbral 10 para reducir multicolinealidad. Descarto un buffer de 5 grados como extensión de background.",
+      "description": "Execution #1: Limpiar las coordenadas y seleccionar variables climáticas independientes para el modelo MaxEnt. Selecciono mediante VIF umbral 10 para reducir multicolinealidad. Descarto un buffer de 5 grados como extensión de background.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "7b77e73cb531102cdfc774416bbe97aa2b0536466035d09271c40e2597056cdc",
+      "dateCreated": "2026-06-25T15:10:38.731+00:00"
+    },
+    {
+      "@id": "code/executions/002_limpiar-las-coordenadas-y-seleccionar-va.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Limpiar las coordenadas y seleccionar variables climáticas independientes para el modelo MaxEnt. Selecciono mediante VIF umbral 10 para reducir multicolinealidad. Descarto un buffer de 5 grados como extensión de background.",
+      "description": "Execution #2: Limpiar las coordenadas y seleccionar variables climáticas independientes para el modelo MaxEnt. Selecciono mediante VIF umbral 10 para reducir multicolinealidad. Descarto un buffer de 5 grados como extensión de background.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "92670b220b51cb45f67a71a27212abeefe61882c93e477d8d686bb9cc2065fec",
+      "dateCreated": "2026-06-25T15:12:25.954+00:00"
+    },
+    {
+      "@id": "code/executions/003_optimizaci-n-de-hiperpar-metros-de-maxen.py",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "description": "Execution #3: Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q28865"
+      },
+      "sha256": "77634a21300f9e4d392ce479ad7bead2ff7c2b81c978ef119d2adb36df1409c6",
+      "dateCreated": "2026-06-25T16:23:38.931+00:00"
+    },
+    {
+      "@id": "code/executions/004_optimizaci-n-de-hiperpar-metros-de-maxen.py",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "description": "Execution #4: Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q28865"
+      },
+      "sha256": "99bce5a92b61bf363359e5c7a09ce61ed676bf7646c98b708c83df1dac4f0b06",
+      "dateCreated": "2026-06-25T16:24:06.6+00:00"
+    },
+    {
+      "@id": "code/executions/005_optimizaci-n-de-hiperpar-metros-de-maxen.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "description": "Execution #5: Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "084abc9db157fb3224088c3c2c63882dc2066231a3ddc1be10b916f2453c0127",
+      "dateCreated": "2026-06-25T16:29:54.122+00:00"
+    },
+    {
+      "@id": "code/executions/006_optimizaci-n-de-hiperpar-metros-de-maxen.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "description": "Execution #6: Optimización de hiperparámetros de MaxEnt utilizando ENMeval con Feature Classes de baja/media complejidad y validación cruzada por bloques espaciales (Spatial Block CV) para seleccionar el modelo con el mejor delta AICc.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "084abc9db157fb3224088c3c2c63882dc2066231a3ddc1be10b916f2453c0127",
+      "dateCreated": "2026-06-25T16:29:58.889+00:00"
+    },
+    {
+      "@id": "code/executions/007_recuperar-los-resultados-del-tuning-as-n.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Recuperar los resultados del tuning asíncrono para verificar si el objeto ENMeval se guardó correctamente y extraer las métricas de evaluación del modelo seleccionado antes de avanzar a las predicciones finales.",
+      "description": "Execution #7: Recuperar los resultados del tuning asíncrono para verificar si el objeto ENMeval se guardó correctamente y extraer las métricas de evaluación del modelo seleccionado antes de avanzar a las predicciones finales.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "a74b08d346373d69c1f2405258d08dea043316889c2d2db69d00c72a3510a4de",
+      "dateCreated": "2026-06-25T21:39:09.775+00:00"
+    },
+    {
+      "@id": "code/executions/008_exportar-la-predicci-n-del-mejor-modelo-.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "description": "Execution #8: Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "8d348087b83e1f91f7d4aee7a8b455562acecc0d82dac13a13e54bc22452e9e7",
+      "dateCreated": "2026-06-25T21:41:47.922+00:00"
+    },
+    {
+      "@id": "code/executions/009_exportar-la-predicci-n-del-mejor-modelo-.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "description": "Execution #9: Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "1811ac4512bfe96430a270084c917f5d8060c1f3066f0af96c28863bf86cc2e3",
+      "dateCreated": "2026-06-25T21:42:32.86+00:00"
+    },
+    {
+      "@id": "code/executions/010_exportar-la-predicci-n-del-mejor-modelo-.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "description": "Execution #10: Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "4ddef6fc2a1e06335c02ddc2952dd0552850a8185e255fea2f36dfc7ae72f2a0",
+      "dateCreated": "2026-06-25T21:44:01.142+00:00"
+    },
+    {
+      "@id": "code/executions/011_exportar-la-predicci-n-del-mejor-modelo-.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "description": "Execution #11: Exportar la predicción del mejor modelo a ASCII y GeoTIFF, graficar el mapa de idoneidad final y extraer las curvas de respuesta para interpretación de nicho.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "97fc00ee5da46f99673f7b04697b2ae8dfa1400ac1314601c51071aaf780a690",
+      "dateCreated": "2026-06-25T21:44:45.341+00:00"
+    },
+    {
+      "@id": "code/executions/012_generar-mapa-final-en-geotiff-y-ascii-cu.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar mapa final en GeoTIFF y ASCII, curvas de respuesta y extraer métricas del mejor modelo de nicho",
+      "description": "Execution #12: Generar mapa final en GeoTIFF y ASCII, curvas de respuesta y extraer métricas del mejor modelo de nicho",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "9c8c3bb14ff90bbf06daab07e85d62fcd6b4c1728d4235429a39159db1a9a6c1",
+      "dateCreated": "2026-06-26T01:59:52.85+00:00"
+    },
+    {
+      "@id": "code/executions/013_generar-mapa-final-en-geotiff-y-ascii-cu.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar mapa final en GeoTIFF y ASCII, curvas de respuesta y extraer métricas del mejor modelo de nicho",
+      "description": "Execution #13: Generar mapa final en GeoTIFF y ASCII, curvas de respuesta y extraer métricas del mejor modelo de nicho",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "19eee68aa053fc9728684b23f752c792079a00e277c669772e67a64361eaec70",
+      "dateCreated": "2026-06-26T02:01:42.101+00:00"
+    },
+    {
+      "@id": "code/executions/014_generar-mapa-final-en-geotiff-y-ascii-cu.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar mapa final en GeoTIFF y ASCII, curvas de respuesta y extraer métricas del mejor modelo de nicho",
+      "description": "Execution #14: Generar mapa final en GeoTIFF y ASCII, curvas de respuesta y extraer métricas del mejor modelo de nicho",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "350effa8071cadd6d177f80e8571d144428dfcc852660a5db4ddbf2f7151eed8",
+      "dateCreated": "2026-06-26T02:02:22.998+00:00"
+    },
+    {
+      "@id": "code/executions/015_generar-asc-mapas-png-y-curvas-de-respue.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "description": "Execution #15: Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "4520019b3ae19c249c35dda358a42fd759362ebc3026286b6b4b06a0a0017b30",
+      "dateCreated": "2026-06-26T02:04:19.462+00:00"
+    },
+    {
+      "@id": "code/executions/016_generar-asc-mapas-png-y-curvas-de-respue.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "description": "Execution #16: Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "4520019b3ae19c249c35dda358a42fd759362ebc3026286b6b4b06a0a0017b30",
+      "dateCreated": "2026-06-26T02:06:50.439+00:00"
+    },
+    {
+      "@id": "code/executions/017_generar-asc-mapas-png-y-curvas-de-respue.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "description": "Execution #17: Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "480b2c84bb2150f42c72dd34262db8b79d036adc0dbb5cc619415c2d622b156f",
+      "dateCreated": "2026-06-26T02:08:10.841+00:00"
+    },
+    {
+      "@id": "code/executions/018_generar-asc-mapas-png-y-curvas-de-respue.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "description": "Execution #18: Generar ASC, mapas PNG y curvas de respuesta que quedaron pendientes por el fallo de GDAL",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "5f8441c3447cb079896f73f58b46eef54aed851824bb2a399366cb9b73e99ec6",
+      "dateCreated": "2026-06-26T02:09:08.682+00:00"
+    },
+    {
+      "@id": "code/executions/020_generar-mapa-de-idoneidad-usando-la-esca.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Generar mapa de idoneidad usando la escala logística y preservar el estilo gráfico exacto",
+      "description": "Execution #20: Generar mapa de idoneidad usando la escala logística y preservar el estilo gráfico exacto",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "64d9afe31fa9215daf4d7223dbc540b451627ece42b31615bbe2f803d630f25b",
+      "dateCreated": "2026-07-02T04:21:18.382+00:00"
+    },
+    {
+      "@id": "provenance/provenance.json",
+      "@type": [
+        "File",
+        "CreativeWork"
+      ],
+      "name": "Provenance Graph",
+      "description": "W3C PROV-O provenance graph with 18 edges",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "http://www.w3.org/ns/prov"
+      }
+    },
+    {
+      "@id": "provenance/artifact_changelog.json",
+      "@type": [
+        "File",
+        "CreativeWork"
+      ],
+      "name": "Artifact Edit History",
+      "description": "Version changelog for all research artifacts (figures, tables) with edit provenance",
+      "encodingFormat": "application/json",
+      "conformsTo": {
+        "@id": "http://www.w3.org/ns/prov"
+      }
+    },
+    {
+      "@id": "https://ressearchai.app",
+      "@type": "SoftwareApplication",
+      "name": "Ressearch AI",
+      "version": "2.0.0",
+      "description": "AI-Powered Scientific Analysis Companion by Skyfall Innovations",
+      "url": "https://ressearchai.app"
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "OK Modelado de nicho ecológico de Sobralia turkeliae",
+      "description": "",
+      "datePublished": "2026-07-07",
+      "license": {
+        "@id": "https://spdx.org/licenses/CC-BY-4.0"
+      },
+      "creator": [
+        {
+          "@id": "#author-irwing-s-salda-a"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "code/executions/001_limpiar-las-coordenadas-y-seleccionar-va.R"
+        },
+        {
+          "@id": "code/executions/002_limpiar-las-coordenadas-y-seleccionar-va.R"
+        },
+        {
+          "@id": "code/executions/003_optimizaci-n-de-hiperpar-metros-de-maxen.py"
+        },
+        {
+          "@id": "code/executions/004_optimizaci-n-de-hiperpar-metros-de-maxen.py"
+        },
+        {
+          "@id": "code/executions/005_optimizaci-n-de-hiperpar-metros-de-maxen.R"
+        },
+        {
+          "@id": "code/executions/006_optimizaci-n-de-hiperpar-metros-de-maxen.R"
+        },
+        {
+          "@id": "code/executions/007_recuperar-los-resultados-del-tuning-as-n.R"
+        },
+        {
+          "@id": "code/executions/008_exportar-la-predicci-n-del-mejor-modelo-.R"
+        },
+        {
+          "@id": "code/executions/009_exportar-la-predicci-n-del-mejor-modelo-.R"
+        },
+        {
+          "@id": "code/executions/010_exportar-la-predicci-n-del-mejor-modelo-.R"
+        },
+        {
+          "@id": "code/executions/011_exportar-la-predicci-n-del-mejor-modelo-.R"
+        },
+        {
+          "@id": "code/executions/012_generar-mapa-final-en-geotiff-y-ascii-cu.R"
+        },
+        {
+          "@id": "code/executions/013_generar-mapa-final-en-geotiff-y-ascii-cu.R"
+        },
+        {
+          "@id": "code/executions/014_generar-mapa-final-en-geotiff-y-ascii-cu.R"
+        },
+        {
+          "@id": "code/executions/015_generar-asc-mapas-png-y-curvas-de-respue.R"
+        },
+        {
+          "@id": "code/executions/016_generar-asc-mapas-png-y-curvas-de-respue.R"
+        },
+        {
+          "@id": "code/executions/017_generar-asc-mapas-png-y-curvas-de-respue.R"
+        },
+        {
+          "@id": "code/executions/018_generar-asc-mapas-png-y-curvas-de-respue.R"
+        },
+        {
+          "@id": "code/executions/020_generar-mapa-de-idoneidad-usando-la-esca.R"
+        },
+        {
+          "@id": "provenance/provenance.json"
+        },
+        {
+          "@id": "provenance/artifact_changelog.json"
+        }
+      ],
+      "keywords": []
+    }
+  ]
+}

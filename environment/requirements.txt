@@ -1,0 +1,5 @@
+# Requirements derivados del execution log.
+# Si una versión está vacía, pip resolverá la más reciente compatible.
+# Para reproducibilidad bit-exacta, pinea manualmente las versiones que
+# correspondan al runtime original (ver metadata/project.json).
+

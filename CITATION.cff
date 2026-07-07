@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: 'If you use this research package, please cite it as below.'
+title: 'OK Modelado de nicho ecológico de Sobralia turkeliae'
+date-released: 2026-07-07
+type: dataset
+authors:
+  - name: 'Irwing S. Saldaña'
+    email: 'irwingssaldu@gmail.com'
+keywords:
+  - reproducible-research
+  - fair-data
+  - ressearch-ai
+license: MIT
+repository-code: 'https://example.invalid/replace-after-deposit'

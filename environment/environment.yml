@@ -1,0 +1,11 @@
+# Binder-compatible conda environment.
+# Python pin se hereda del Dockerfile incluido en el paquete.
+name: ressearch-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pip
+  - pip:
+    []

@@ -1,0 +1,108 @@
+[
+  {
+    "artifactId": 2645,
+    "title": "o4_suitability_map_logistic.png",
+    "type": "image",
+    "totalVersions": 4,
+    "versions": [
+      {
+        "version": 1,
+        "contentHash": "fcaa647f80370a40ba98dc0b1e5fb719ae4a3100491b968c6f7454aa2a905ef6",
+        "editSource": "baseline",
+        "editPrompt": "Versión original",
+        "aiModel": null,
+        "parentVersion": null,
+        "createdAt": "2026-07-02T04:31:01.202+00:00"
+      },
+      {
+        "version": 2,
+        "contentHash": "f25038b9a0c314ec22a413a1f9ead1eae2f523523fb0be26f42ed38508aa0663",
+        "editSource": "figure_chat",
+        "editPrompt": null,
+        "aiModel": null,
+        "parentVersion": "7feb1e9f-fad2-409e-87b3-f16ec4427a74",
+        "createdAt": "2026-07-02T04:31:02.052+00:00"
+      },
+      {
+        "version": 3,
+        "contentHash": "5fbf24b45225fb5be189676710d9d1e4181bd7a6abd758e0bd66212072fb6fe8",
+        "editSource": "figure_chat",
+        "editPrompt": "__selection_only__",
+        "aiModel": null,
+        "parentVersion": "3a316425-a954-405d-a2f6-71f744c5138f",
+        "createdAt": "2026-07-02T04:51:37.855+00:00"
+      },
+      {
+        "version": 4,
+        "contentHash": "844fbc87b2c0b4759408a0b7236ffb2386c3393e9b46a863d4f7aa27dc72f762",
+        "editSource": "figure_chat",
+        "editPrompt": null,
+        "aiModel": null,
+        "parentVersion": "1fbe69b6-f0e5-4eae-b1f1-dc47bf45e727",
+        "createdAt": "2026-07-02T05:04:17.892+00:00"
+      }
+    ]
+  },
+  {
+    "artifactId": 2543,
+    "title": "o3_suitability_map.png",
+    "type": "image",
+    "totalVersions": 6,
+    "versions": [
+      {
+        "version": 1,
+        "contentHash": "795eb581a59e92122cedd105f3ead289fbf144911e73a8de8f8fe4c3f0f02e0c",
+        "editSource": "baseline",
+        "editPrompt": "Versión original",
+        "aiModel": null,
+        "parentVersion": null,
+        "createdAt": "2026-07-02T02:04:29.079+00:00"
+      },
+      {
+        "version": 2,
+        "contentHash": "ab9f7fe6ccb087e5375602a1030822a6cbfaa55beb996cbc0defd9430c174c1c",
+        "editSource": "figure_chat",
+        "editPrompt": "Cuidado que el titulos se sale del gráfico, porque es grande. La info del titulo ponlo como labs(caption) en el gráfico no como título",
+        "aiModel": null,
+        "parentVersion": "e36dc950-0732-4616-9547-6d2ec9d5c925",
+        "createdAt": "2026-07-02T02:04:30.206+00:00"
+      },
+      {
+        "version": 3,
+        "contentHash": "2f35f260749318f6145d4bc2c4099503788fd5dca4c7c96293ba89750bcea39d",
+        "editSource": "figure_chat",
+        "editPrompt": "__selection_only__",
+        "aiModel": null,
+        "parentVersion": "ae72bd26-1e3e-44c4-8db3-6433ac160418",
+        "createdAt": "2026-07-02T02:05:26.928+00:00"
+      },
+      {
+        "version": 4,
+        "contentHash": "2171a5f8445e80aae1f393f03bfce4d6a6893db7d74adb16ab7caf68195b409f",
+        "editSource": "figure_chat",
+        "editPrompt": "__selection_only__",
+        "aiModel": null,
+        "parentVersion": "466ee875-d736-4ca2-b19b-848fc5746c21",
+        "createdAt": "2026-07-02T02:20:27.968+00:00"
+      },
+      {
+        "version": 5,
+        "contentHash": "473a7eec30ad29b1a33a4cd51d76e2263861d0597241ae31dbef72f9e29531aa",
+        "editSource": "figure_chat",
+        "editPrompt": null,
+        "aiModel": null,
+        "parentVersion": "3cb5dcce-f1e8-43d3-bf65-dbc08387b39d",
+        "createdAt": "2026-07-02T04:15:34.016+00:00"
+      },
+      {
+        "version": 6,
+        "contentHash": "8931fcb1b61f767eb2082fad2eb9b45b58885b2a1d86a42cd0062ce5ca632e72",
+        "editSource": "figure_chat",
+        "editPrompt": null,
+        "aiModel": null,
+        "parentVersion": "915f2dc2-8b87-4620-83e0-1bfeaa393302",
+        "createdAt": "2026-07-02T05:17:43.894+00:00"
+      }
+    ]
+  }
+]

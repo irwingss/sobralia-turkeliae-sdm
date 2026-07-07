@@ -1,0 +1,80 @@
+{
+  "project_id": 412,
+  "user_id": "8ffd4b9e-9d72-4342-9755-db37cf8240ba",
+  "titulo": null,
+  "problema_general": null,
+  "problemas_especificos": [],
+  "objetivo_general": "Desarrollar un modelo de distribución de especies para Sobralia turkeliae utilizando MaxEnt para comprender su nicho ecológico y biogeografía.",
+  "objetivos_especificos": [
+    "Obtener y limpiar los datos de presencia de Sobralia turkeliae.",
+    "Seleccionar las variables bioclimáticas óptimas mediante el Factor de Inflación de Varianza (VIF).",
+    "Optimizar los parámetros del modelo MaxEnt utilizando validación cruzada espacial k-folds.",
+    "Generar los productos del modelo de distribución de especies (ASCII, GeoTIFF y mapa).",
+    "Analizar e interpretar el nicho ecológico y la biogeografía de Sobralia turkeliae.",
+    "Validar los hallazgos del modelo mediante una búsqueda y revisión de literatura científica."
+  ],
+  "hipotesis_general": null,
+  "hipotesis_especificas": [],
+  "variables": [
+    {
+      "name": "Presencia de Sobralia turkeliae",
+      "type": "dependent",
+      "indicators": [],
+      "data_binding": null,
+      "measurement_scale": null,
+      "definition_conceptual": "La ocurrencia o no ocurrencia de la especie Sobralia turkeliae en una ubicación geográfica específica.",
+      "definition_operacional": "Registros de presencia de Sobralia turkeliae obtenidos de un archivo Excel, después de la eliminación de duplicados en celdas de 2.5 minutos."
+    },
+    {
+      "name": "Variables bioclimáticas",
+      "type": "independent",
+      "indicators": [],
+      "data_binding": null,
+      "measurement_scale": null,
+      "definition_conceptual": "Variables climáticas que describen las condiciones ambientales de una región, como temperatura y precipitación, relevantes para la distribución de especies.",
+      "definition_operacional": "Variables bioclimáticas con una resolución de 2.5 minutos, seleccionadas después de aplicar el Factor de Inflación de Varianza (VIF)."
+    },
+    {
+      "name": "Multiplicadores de regularización",
+      "type": "other",
+      "indicators": [],
+      "data_binding": null,
+      "measurement_scale": null,
+      "definition_conceptual": "Parámetros que controlan la complejidad del modelo MaxEnt, ayudando a prevenir el sobreajuste.",
+      "definition_operacional": "Multiplicadores de regularización probados durante la fase de optimización del modelo MaxEnt."
+    },
+    {
+      "name": "Hiperparámetros (L, LQ, H, LQH)",
+      "type": "other",
+      "indicators": [],
+      "data_binding": null,
+      "measurement_scale": null,
+      "definition_conceptual": "Diferentes tipos de características de respuesta utilizadas en MaxEnt para modelar la relación entre las variables ambientales y la presencia de la especie.",
+      "definition_operacional": "Combinaciones de características de respuesta (L, LQ, H, LQH) evaluadas durante la optimización del modelo MaxEnt."
+    }
+  ],
+  "source_artifact_id": null,
+  "extracted_from": null,
+  "extractor_model": null,
+  "extraction_confidence": null,
+  "raw_text_excerpt": null,
+  "is_user_edited": false,
+  "created_at": "2026-06-26T02:02:04.64093+00:00",
+  "updated_at": "2026-06-26T02:02:37.313442+00:00",
+  "brief_source": "user_edited",
+  "objective_completion": [],
+  "inference_signals_count": 0,
+  "last_inferred_at": null,
+  "last_completion_evaluated_at": null,
+  "titulo_suggestions": [],
+  "pregunta_general": null,
+  "preguntas_especificas": [],
+  "tipo_estudio": "Modelado de Distribución de Especies (MDE)",
+  "diseno": "Estudio de modelado de nicho ecológico y distribución de especies",
+  "poblacion": "Sobralia turkeliae",
+  "muestra": "Registros de presencia de Sobralia turkeliae obtenidos de un archivo Excel, depurados para eliminar duplicados en celdas de 2.5 minutos.",
+  "locked_fields": {},
+  "created_by": null,
+  "last_modified_by": null,
+  "last_modified_at": null
+}

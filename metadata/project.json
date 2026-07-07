@@ -1,0 +1,19 @@
+{
+  "id": 412,
+  "name": "OK Modelado de nicho ecológico de Sobralia turkeliae",
+  "description": "",
+  "slug": "jZJlnKVNF3yMbDnVHRbS",
+  "status": "ready",
+  "createdAt": "2026-06-25T15:05:42.831287+00:00",
+  "updatedAt": "2026-07-07T16:27:00.16343+00:00",
+  "paperTitle": null,
+  "paperFilename": null,
+  "methodology": null,
+  "projectMode": "bandada",
+  "publicationType": "original_article",
+  "userObjectives": [],
+  "researchContext": {},
+  "thesisGuidelines": null,
+  "writingDefaultLanguage": "es",
+  "writingDefaultCitationStyle": "apa"
+}
