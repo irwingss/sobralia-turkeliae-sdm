@@ -1,4 +1,4 @@
-# OK Modelado de nicho ecológico de Sobralia turkeliae
+# Modelado de nicho ecológico de Sobralia turkeliae
 
 > Research Package generado por **[Ressearch AI](https://ressearchai.app)** · 2026-07-07T16:27:00.16343+00:00
 
