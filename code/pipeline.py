@@ -1,5 +1,5 @@
 """
-OK Modelado de nicho ecológico de Sobralia turkeliae — Unified Python Analysis Pipeline
+Modelado de nicho ecológico de Sobralia turkeliae — Unified Python Analysis Pipeline
 
 Generado con asistencia de Ressearch AI (https://ressearchai.app).
 AVISO: este pipeline contiene código generado o asistido por IA.

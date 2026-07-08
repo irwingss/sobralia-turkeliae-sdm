@@ -4,7 +4,7 @@ The data and analysis code supporting the findings of this study are available i
 
 ### Analysis Code
 
-21 analysis execution(s) are included with full provenance tracking. Each execution record includes the exact code, input data checksums, software environment (package versions), and output artifact hashes.
+25 analysis execution(s) are included with full provenance tracking. Each execution record includes the exact code, input data checksums, software environment (package versions), and output artifact hashes.
 
 ### Reproducibility
 

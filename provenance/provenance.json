@@ -89,6 +89,26 @@
       "@id": "urn:stem-flow:artifact_version:ae7b7524-ffde-4fdd-ae58-b5a7e2b411d4",
       "@type": "prov:Entity",
       "prov:type": "artifact_version"
+    },
+    {
+      "@id": "urn:stem-flow:artifact_version:08d37d7c-3bf6-4442-bbad-b84267b22b32",
+      "@type": "prov:Entity",
+      "prov:type": "artifact_version"
+    },
+    {
+      "@id": "urn:stem-flow:artifact:2793",
+      "@type": "prov:Entity",
+      "prov:type": "artifact"
+    },
+    {
+      "@id": "urn:stem-flow:artifact_version:1b46b089-d14f-44da-8258-dc0ea28793fd",
+      "@type": "prov:Entity",
+      "prov:type": "artifact_version"
+    },
+    {
+      "@id": "urn:stem-flow:artifact_version:10eb2975-fe8d-4bd5-b951-093f92dbd9ee",
+      "@type": "prov:Entity",
+      "prov:type": "artifact_version"
     }
   ],
   "prov:activity": [],
@@ -104,16 +124,6 @@
       "prov:time": "2026-07-02T02:04:29.222+00:00"
     },
     {
-      "@type": "prov:wasDerivedFrom",
-      "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:ae72bd26-1e3e-44c4-8db3-6433ac160418"
-      },
-      "prov:object": {
-        "@id": "urn:stem-flow:artifact:2543"
-      },
-      "prov:time": "2026-07-02T02:04:30.337+00:00"
-    },
-    {
       "@type": "prov:wasRevisionOf",
       "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:ae72bd26-1e3e-44c4-8db3-6433ac160418"
@@ -126,6 +136,16 @@
     {
       "@type": "prov:wasDerivedFrom",
       "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:ae72bd26-1e3e-44c4-8db3-6433ac160418"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2543"
+      },
+      "prov:time": "2026-07-02T02:04:30.337+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:466ee875-d736-4ca2-b19b-848fc5746c21"
       },
       "prov:object": {
@@ -144,22 +164,22 @@
       "prov:time": "2026-07-02T02:05:27.052+00:00"
     },
     {
-      "@type": "prov:wasDerivedFrom",
-      "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:3cb5dcce-f1e8-43d3-bf65-dbc08387b39d"
-      },
-      "prov:object": {
-        "@id": "urn:stem-flow:artifact:2543"
-      },
-      "prov:time": "2026-07-02T02:20:28.085+00:00"
-    },
-    {
       "@type": "prov:wasRevisionOf",
       "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:3cb5dcce-f1e8-43d3-bf65-dbc08387b39d"
       },
       "prov:object": {
         "@id": "urn:stem-flow:artifact_version:466ee875-d736-4ca2-b19b-848fc5746c21"
+      },
+      "prov:time": "2026-07-02T02:20:28.085+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:3cb5dcce-f1e8-43d3-bf65-dbc08387b39d"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2543"
       },
       "prov:time": "2026-07-02T02:20:28.085+00:00"
     },
@@ -214,16 +234,6 @@
       "prov:time": "2026-07-02T04:31:02.175+00:00"
     },
     {
-      "@type": "prov:wasDerivedFrom",
-      "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:1fbe69b6-f0e5-4eae-b1f1-dc47bf45e727"
-      },
-      "prov:object": {
-        "@id": "urn:stem-flow:artifact:2645"
-      },
-      "prov:time": "2026-07-02T04:51:37.971+00:00"
-    },
-    {
       "@type": "prov:wasRevisionOf",
       "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:1fbe69b6-f0e5-4eae-b1f1-dc47bf45e727"
@@ -236,12 +246,12 @@
     {
       "@type": "prov:wasDerivedFrom",
       "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:9feb80a6-e77f-416b-9951-0d0f150dfa32"
+        "@id": "urn:stem-flow:artifact_version:1fbe69b6-f0e5-4eae-b1f1-dc47bf45e727"
       },
       "prov:object": {
         "@id": "urn:stem-flow:artifact:2645"
       },
-      "prov:time": "2026-07-02T05:04:18.033+00:00"
+      "prov:time": "2026-07-02T04:51:37.971+00:00"
     },
     {
       "@type": "prov:wasRevisionOf",
@@ -250,6 +260,16 @@
       },
       "prov:object": {
         "@id": "urn:stem-flow:artifact_version:1fbe69b6-f0e5-4eae-b1f1-dc47bf45e727"
+      },
+      "prov:time": "2026-07-02T05:04:18.033+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:9feb80a6-e77f-416b-9951-0d0f150dfa32"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2645"
       },
       "prov:time": "2026-07-02T05:04:18.033+00:00"
     },
@@ -284,16 +304,6 @@
       "prov:time": "2026-07-07T16:54:26.835+00:00"
     },
     {
-      "@type": "prov:wasDerivedFrom",
-      "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:ae97a775-9669-40e3-9a19-85b1268d6611"
-      },
-      "prov:object": {
-        "@id": "urn:stem-flow:artifact:2780"
-      },
-      "prov:time": "2026-07-07T16:54:27.811+00:00"
-    },
-    {
       "@type": "prov:wasRevisionOf",
       "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:ae97a775-9669-40e3-9a19-85b1268d6611"
@@ -304,6 +314,26 @@
       "prov:time": "2026-07-07T16:54:27.811+00:00"
     },
     {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:ae97a775-9669-40e3-9a19-85b1268d6611"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2780"
+      },
+      "prov:time": "2026-07-07T16:54:27.811+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:b50a3d43-65c0-4e74-95d1-1ed0022d8c5d"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2780"
+      },
+      "prov:time": "2026-07-07T17:20:06.079+00:00"
+    },
+    {
       "@type": "prov:wasRevisionOf",
       "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:b50a3d43-65c0-4e74-95d1-1ed0022d8c5d"
@@ -314,26 +344,6 @@
       "prov:time": "2026-07-07T17:20:06.079+00:00"
     },
     {
-      "@type": "prov:wasDerivedFrom",
-      "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:b50a3d43-65c0-4e74-95d1-1ed0022d8c5d"
-      },
-      "prov:object": {
-        "@id": "urn:stem-flow:artifact:2780"
-      },
-      "prov:time": "2026-07-07T17:20:06.079+00:00"
-    },
-    {
-      "@type": "prov:wasDerivedFrom",
-      "prov:subject": {
-        "@id": "urn:stem-flow:artifact_version:ae7b7524-ffde-4fdd-ae58-b5a7e2b411d4"
-      },
-      "prov:object": {
-        "@id": "urn:stem-flow:artifact:2780"
-      },
-      "prov:time": "2026-07-07T17:21:08.311+00:00"
-    },
-    {
       "@type": "prov:wasRevisionOf",
       "prov:subject": {
         "@id": "urn:stem-flow:artifact_version:ae7b7524-ffde-4fdd-ae58-b5a7e2b411d4"
@@ -342,6 +352,66 @@
         "@id": "urn:stem-flow:artifact_version:b50a3d43-65c0-4e74-95d1-1ed0022d8c5d"
       },
       "prov:time": "2026-07-07T17:21:08.311+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:ae7b7524-ffde-4fdd-ae58-b5a7e2b411d4"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2780"
+      },
+      "prov:time": "2026-07-07T17:21:08.311+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:08d37d7c-3bf6-4442-bbad-b84267b22b32"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2793"
+      },
+      "prov:time": "2026-07-08T04:10:58.016+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:1b46b089-d14f-44da-8258-dc0ea28793fd"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2793"
+      },
+      "prov:time": "2026-07-08T04:10:58.687+00:00"
+    },
+    {
+      "@type": "prov:wasRevisionOf",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:1b46b089-d14f-44da-8258-dc0ea28793fd"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact_version:08d37d7c-3bf6-4442-bbad-b84267b22b32"
+      },
+      "prov:time": "2026-07-08T04:10:58.688+00:00"
+    },
+    {
+      "@type": "prov:wasRevisionOf",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:10eb2975-fe8d-4bd5-b951-093f92dbd9ee"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact_version:1b46b089-d14f-44da-8258-dc0ea28793fd"
+      },
+      "prov:time": "2026-07-08T04:11:43.074+00:00"
+    },
+    {
+      "@type": "prov:wasDerivedFrom",
+      "prov:subject": {
+        "@id": "urn:stem-flow:artifact_version:10eb2975-fe8d-4bd5-b951-093f92dbd9ee"
+      },
+      "prov:object": {
+        "@id": "urn:stem-flow:artifact:2793"
+      },
+      "prov:time": "2026-07-08T04:11:43.074+00:00"
     }
   ]
 }

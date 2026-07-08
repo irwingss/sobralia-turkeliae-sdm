@@ -1,10 +1,10 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "OK Modelado de nicho ecológico de Sobralia turkeliae - Analysis Code",
-  "description": "Reproducible analysis code for: OK Modelado de nicho ecológico de Sobralia turkeliae",
+  "name": "Modelado de nicho ecológico de Sobralia turkeliae - Analysis Code",
+  "description": "Reproducible analysis code for: Modelado de nicho ecológico de Sobralia turkeliae",
   "version": "1.0.0",
-  "dateCreated": "2026-07-07",
+  "dateCreated": "2026-07-08",
   "license": "https://spdx.org/licenses/MIT",
   "programmingLanguage": [
     "R",

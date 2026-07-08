@@ -10,7 +10,7 @@
       "conformsTo": {
         "@id": "https://w3id.org/ro/crate/1.1"
       },
-      "dateCreated": "2026-07-07T16:35:16.411+00:00"
+      "dateCreated": "2026-07-08T05:21:50.528+00:00"
     },
     {
       "@id": "#author-irwing-s-salda-a",
@@ -318,13 +318,69 @@
       "dateCreated": "2026-07-07T16:35:16.411+00:00"
     },
     {
+      "@id": "code/executions/023_extraer-m-tricas-del-mejor-modelo-y-cont.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Extraer métricas del mejor modelo y contribución de variables para redactar la sección de resultados.",
+      "description": "Execution #23: Extraer métricas del mejor modelo y contribución de variables para redactar la sección de resultados.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "023b31c2ee33f333ce894035fa1964f4a32b8092d1300d86d126b5cbc0001ed4",
+      "dateCreated": "2026-07-07T17:28:32.758+00:00"
+    },
+    {
+      "@id": "code/executions/024_calcular-la-importancia-por-permutaci-n-.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Calcular la importancia por permutación de las variables del modelo óptimo y generar un gráfico de barras.",
+      "description": "Execution #24: Calcular la importancia por permutación de las variables del modelo óptimo y generar un gráfico de barras.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "fd5c8cbb81949aebdaeb4ace8ae3b0018fa37edc61bf60f03992a5a2786ee458",
+      "dateCreated": "2026-07-07T17:29:56.698+00:00"
+    },
+    {
+      "@id": "code/executions/025_calcular-el-rea-de-distribuci-n-usando-c.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Calcular el área de distribución usando Convex Hull y umbralización del SDM logístico al 10th percentile",
+      "description": "Execution #25: Calcular el área de distribución usando Convex Hull y umbralización del SDM logístico al 10th percentile",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "6b3ffd15c1ac0f27fc2ea89f3bc4019df3e22d0d0c02ee4455873504895ad8c1",
+      "dateCreated": "2026-07-08T03:58:21.542+00:00"
+    },
+    {
+      "@id": "code/executions/026_regenerar-mapa-comparativo-de-reas-inclu.R",
+      "@type": [
+        "File",
+        "SoftwareSourceCode"
+      ],
+      "name": "Regenerar mapa comparativo de áreas incluyendo el mapa base de Sudamérica para dar contexto cartográfico de fondo.",
+      "description": "Execution #26: Regenerar mapa comparativo de áreas incluyendo el mapa base de Sudamérica para dar contexto cartográfico de fondo.",
+      "programmingLanguage": {
+        "@id": "https://www.wikidata.org/wiki/Q206904"
+      },
+      "sha256": "e8fa40a5599a1e26a28e22177714b99e7c0748d840fdda76e13ecbb9c44eb1e3",
+      "dateCreated": "2026-07-08T04:05:22.14+00:00"
+    },
+    {
       "@id": "provenance/provenance.json",
       "@type": [
         "File",
         "CreativeWork"
       ],
       "name": "Provenance Graph",
-      "description": "W3C PROV-O provenance graph with 25 edges",
+      "description": "W3C PROV-O provenance graph with 30 edges",
       "encodingFormat": "application/json",
       "conformsTo": {
         "@id": "http://www.w3.org/ns/prov"
@@ -354,9 +410,9 @@
     {
       "@id": "./",
       "@type": "Dataset",
-      "name": "OK Modelado de nicho ecológico de Sobralia turkeliae",
+      "name": "Modelado de nicho ecológico de Sobralia turkeliae",
       "description": "",
-      "datePublished": "2026-07-07",
+      "datePublished": "2026-07-08",
       "license": {
         "@id": "https://spdx.org/licenses/CC-BY-4.0"
       },
@@ -428,6 +484,18 @@
         },
         {
           "@id": "code/executions/022_generar-los-datos-de-las-curvas-de-respu.R"
+        },
+        {
+          "@id": "code/executions/023_extraer-m-tricas-del-mejor-modelo-y-cont.R"
+        },
+        {
+          "@id": "code/executions/024_calcular-la-importancia-por-permutaci-n-.R"
+        },
+        {
+          "@id": "code/executions/025_calcular-el-rea-de-distribuci-n-usando-c.R"
+        },
+        {
+          "@id": "code/executions/026_regenerar-mapa-comparativo-de-reas-inclu.R"
         },
         {
           "@id": "provenance/provenance.json"

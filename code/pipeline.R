@@ -1,4 +1,4 @@
-# OK Modelado de nicho ecológico de Sobralia turkeliae — Unified R Analysis Pipeline
+# Modelado de nicho ecológico de Sobralia turkeliae — Unified R Analysis Pipeline
 # Generado con asistencia de Ressearch AI (https://ressearchai.app).
 # AVISO: este pipeline contiene código generado o asistido por IA.
 # Debe ser validado por una persona responsable antes de su uso
@@ -1162,5 +1162,248 @@ p <- ggplot(response_curves_df, aes(x = value, y = suitability)) +
 
 ggsave("o5_response_curves.png", p, width = 10, height = 5.625, dpi = 300, bg = "#ffffff")
 message("Figura exportada con éxito: o5_response_curves.png")
+
+# ─── Step 23: Extraer métricas del mejor modelo y contribución de variables para redactar la sección de resultados. ───────────────────
+# Run ID: fast-chat-run-1783445275382-6b5rgp
+# Objective: o5_results_synthesis
+
+library(ENMeval)
+library(dplyr)
+library(terra)
+
+# 1. Extraer N de ocurrencias y variables
+occs <- read.csv("o1_occs_clean.csv")
+envs <- terra::rast("o1_envs_selected.tif")
+
+cat("--- OCURRENCIAS Y VARIABLES ---\n")
+cat("N ocurrencias limpias:", nrow(occs), "\n")
+cat("Variables seleccionadas:", paste(names(envs), collapse=", "), "\n\n")
+
+# 2. Resultados del modelo óptimo
+res <- read.csv("o2_enmeval_results.csv")
+best_res <- res %>% arrange(delta.AICc) %>% slice(1)
+cat("--- MÉTRICAS DEL MODELO ÓPTIMO ---\n")
+print(best_res)
+cat("\n")
+
+# 3. Importancia de variables
+e <- readRDS("o2_enmeval_object.rds")
+best_model_name <- best_res$tune.args
+cat("--- IMPORTANCIA DE VARIABLES (", best_model_name, ") ---\n")
+var_imp <- e@variable.importance[[best_model_name]]
+if (!is.null(var_imp)) {
+  print(var_imp)
+} else {
+  cat("La importancia de variables no está directamente en el slot de ENMeval. Evaluando si es maxnet...\n")
+  # Si es maxnet sin var.imp calculado, mostramos los coeficientes no nulos
+  mod <- e@models[[best_model_name]]
+  if(inherits(mod, "maxnet")) {
+     cat("Modelo maxnet. Variables en el modelo:\n")
+     print(names(mod$samplemeans))
+  }
+}
+
+
+# ─── Step 24: Calcular la importancia por permutación de las variables del modelo óptimo y generar un gráfico de barras. ───────────────────
+# Run ID: fast-chat-run-1783445357145-zejufs
+# Objective: o5_results_synthesis
+
+library(ENMeval)
+library(dplyr)
+library(terra)
+library(ggplot2)
+
+# Cargar resultados previos
+e <- readRDS("o2_enmeval_object.rds")
+res <- read.csv("o2_enmeval_results.csv")
+best_model_name <- res %>% arrange(delta.AICc) %>% slice(1) %>% pull(tune.args)
+
+# Extraer el mejor modelo
+mod <- e@models[[best_model_name]]
+
+# Extraer datos de evaluación del objeto ENMeval
+occs_test <- e@occ.test
+bg_test <- e@bg.coords
+
+# Crear un data frame para la evaluación
+eval_data <- rbind(occs_test, bg_test)
+presence <- c(rep(1, nrow(occs_test)), rep(0, nrow(bg_test)))
+
+# Calcular la importancia por permutación
+var_imp <- dismo::evaluate(p = occs_test, a = bg_test, model = mod, x = e@env)@cor
+
+var_imp_df <- data.frame(
+  variable = names(e@env),
+  importance = var_imp
+) %>% arrange(desc(importance))
+
+# Guardar la tabla de importancia
+write.csv(var_imp_df, "o5_variable_importance.csv", row.names = FALSE)
+
+# Visualizar y guardar
+gg_imp <- ggplot(var_imp_df, aes(x = reorder(variable, importance), y = importance)) +
+  geom_bar(stat = "identity", fill = "#2e65dc") +
+  coord_flip() +
+  labs(
+    title = "Importancia de las Variables (Permutación)",
+    subtitle = "Para el modelo óptimo de S. turkeliae (fc.LQ_rm.0.5)",
+    x = "Variable Bioclimática",
+    y = "Importancia por Permutación"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+      plot.title = element_text(face = "bold", hjust = 0.5),
+      plot.subtitle = element_text(hjust = 0.5, size=10)
+  )
+
+ggsave("o5_variable_importance.png", plot = gg_imp, width = 10, height = 6, dpi = 300)
+
+# Imprimir la tabla en consola
+cat("\n--- IMPORTANCIA DE VARIABLES (PERMUTACIÓN) ---\n")
+print(var_imp_df)
+
+
+# ─── Step 25: Calcular el área de distribución usando Convex Hull y umbralización del SDM logístico al 10th percentile ───────────────────
+# Run ID: fast-chat-run-1783483031803-3xs78e
+# Objective: o5_biogeography_analysis
+
+library(terra)
+library(sf)
+library(readr)
+library(dplyr)
+
+cat("--- OBTENIENDO COORDENADAS ---\n")
+occs <- read_csv("o1_occs_clean.csv", show_col_types = FALSE)
+lon_col <- intersect(names(occs), c("Longitude", "lon", "x"))[1]
+lat_col <- intersect(names(occs), c("Latitude", "lat", "y"))[1]
+
+pts <- st_as_sf(occs, coords = c(lon_col, lat_col), crs = 4326)
+
+# 1. Minimum Convex Hull
+cat("\n--- METODO 1: MINIMUM CONVEX HULL ---\n")
+hull <- st_convex_hull(st_union(pts))
+area_hull_km2 <- as.numeric(st_area(hull)) / 1e6
+cat(sprintf("Área del Convex Hull: %.2f km2\n", area_hull_km2))
+
+st_write(hull, "o5_convex_hull.geojson", delete_dsn=TRUE, quiet=TRUE)
+
+# 2. Binarización del SDM
+cat("\n--- METODO 2: SDM THRESHOLD ---\n")
+r_log <- rast("o4_Sobralia_turkeliae_suitability_logistic.tif")
+pts_spat <- vect(occs, geom=c(lon_col, lat_col), crs="EPSG:4326")
+
+# Extraer los valores de idoneidad en los puntos de presencia
+pred_vals <- extract(r_log, pts_spat)[[2]]
+
+# Definir umbrales
+thresh_10 <- quantile(pred_vals, probs = 0.1, na.rm = TRUE)
+thresh_mtp <- min(pred_vals, na.rm = TRUE)
+
+cat(sprintf("Umbral 10th Percentile: %.4f\n", thresh_10))
+cat(sprintf("Umbral Minimum Training Presence (MTP): %.4f\n", thresh_mtp))
+
+# Aplicar el umbral del 10%
+r_bin <- r_log >= thresh_10
+names(r_bin) <- "Presence"
+
+# Calcular el área con expanse() de terra, que ajusta por la curvatura terrestre
+areas <- expanse(r_bin, byValue=TRUE, unit="km")
+area_sdm_km2 <- areas$area[areas$value %in% c(1, TRUE)]
+
+cat(sprintf("Área del SDM Binario (Umbral 10p): %.2f km2\n", area_sdm_km2))
+
+writeRaster(r_bin, "o5_sdm_binary_10th.tif", overwrite=TRUE)
+
+# Generar un gráfico comparativo de las áreas
+png("o5_areas_comparacion.png", width=2000, height=1000, res=200)
+par(mfrow=c(1,2), mar=c(2,2,4,2), bg="white", family="sans")
+
+plot(hull, col="#e6f2ff", border="#2e65dc", lwd=1.5, 
+     main=sprintf("Minimum Convex Hull\nÁrea: %s km²", formatC(round(area_hull_km2, 1), format="f", big.mark=",")),
+     col.main="#0b1a3a", cex.main=1.2)
+plot(st_geometry(pts), add=TRUE, pch=21, col="white", bg="#ec0f01", cex=1.2, lwd=0.8)
+
+plot(r_bin, col=c("#ffffff", "#01781b"), legend=FALSE, axes=FALSE,
+     main=sprintf("SDM Binarizado (Umbral 10%%)\nÁrea: %s km²", formatC(round(area_sdm_km2, 1), format="f", big.mark=",")),
+     col.main="#0b1a3a", cex.main=1.2)
+plot(st_geometry(pts), add=TRUE, pch=21, col="white", bg="#ec0f01", cex=0.8, lwd=0.5)
+
+dev.off()
+
+# Capturar métricas para el sistema
+cat(sprintf("\n{\"metric_ch\": %.2f, \"metric_sdm\": %.2f, \"threshold\": %.4f}\n", area_hull_km2, area_sdm_km2, thresh_10))
+
+# ─── Step 26: Regenerar mapa comparativo de áreas incluyendo el mapa base de Sudamérica para dar contexto cartográfico de fondo. ───────────────────
+# Run ID: fast-chat-run-1783483452879-ulymgr
+# Objective: o5_biogeography_analysis
+
+library(terra)
+library(sf)
+library(readr)
+library(dplyr)
+library(maps)
+
+# 1. Cargar presencia y calcular Convex Hull
+occs <- read_csv("o1_occs_clean.csv", show_col_types = FALSE)
+lon_col <- intersect(names(occs), c("Longitude", "lon", "x"))[1]
+lat_col <- intersect(names(occs), c("Latitude", "lat", "y"))[1]
+pts <- st_as_sf(occs, coords = c(lon_col, lat_col), crs = 4326)
+
+hull <- st_convex_hull(st_union(pts))
+area_hull_km2 <- as.numeric(st_area(hull)) / 1e6
+
+# 2. Cargar SDM y binarizar
+r_log <- rast("o4_Sobralia_turkeliae_suitability_logistic.tif")
+pts_spat <- vect(occs, geom=c(lon_col, lat_col), crs="EPSG:4326")
+pred_vals <- extract(r_log, pts_spat)[[2]]
+thresh_10 <- quantile(pred_vals, probs = 0.1, na.rm = TRUE)
+
+r_bin <- r_log >= thresh_10
+names(r_bin) <- "Presence"
+areas <- expanse(r_bin, byValue=TRUE, unit="km")
+area_sdm_km2 <- areas$area[areas$value %in% c(1, TRUE)]
+
+# 3. Preparar mapa base de Sudamérica usando el paquete preinstalado 'maps'
+world_map <- st_as_sf(maps::map("world", plot = FALSE, fill = TRUE))
+sa_countries <- c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", 
+                  "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela", 
+                  "French Guiana", "Falkland Islands")
+south_america <- world_map %>% filter(ID %in% sa_countries)
+
+# Definir la extensión geográfica de interés enfocada en la distribución de la especie y alrededores
+bbox <- st_bbox(hull)
+# Ampliar el bbox un poco para dar contexto regional, pero manteniendo el foco
+xlim <- c(bbox["xmin"] - 4, bbox["xmax"] + 4)
+ylim <- c(bbox["ymin"] - 4, bbox["ymax"] + 4)
+
+# 4. Generar el gráfico comparativo con mapa base
+png("o5_areas_comparacion.png", width=2000, height=1000, res=200)
+par(mfrow=c(1,2), mar=c(3,3,4,3), bg="white", family="sans")
+
+# Panel 1: Convex Hull
+plot(st_geometry(south_america), col="#f2f2f2", border="#cccccc", lwd=0.5, 
+     xlim=xlim, ylim=ylim, 
+     main=sprintf("Minimum Convex Hull\nÁrea: %s km²", formatC(round(area_hull_km2, 1), format="f", big.mark=",")),
+     col.main="#0b1a3a", cex.main=1.1, axes=TRUE)
+plot(hull, col=adjustcolor("#2e65dc", alpha.f=0.25), border="#2e65dc", lwd=1.5, add=TRUE)
+plot(st_geometry(pts), add=TRUE, pch=21, col="white", bg="#ec0f01", cex=1.1, lwd=0.8)
+
+# Panel 2: SDM Binario
+# terra::plot dibuja rásters. Para que use el bbox y respete el fondo:
+# Graficamos primero el mapa base de Sudamérica para establecer los límites
+plot(st_geometry(south_america), col="#f2f2f2", border="#cccccc", lwd=0.5, 
+     xlim=xlim, ylim=ylim, 
+     main=sprintf("SDM Binarizado (Umbral 10%%)\nÁrea: %s km²", formatC(round(area_sdm_km2, 1), format="f", big.mark=",")),
+     col.main="#0b1a3a", cex.main=1.1, axes=TRUE)
+
+# Convertir el raster a dataframe de celdas "Presencia" para pintarlas como polígonos o usar el raster directamente
+# Para pintar el raster transparente encima del mapa base de fondo:
+# Generamos una paleta donde 0 es transparente y 1 es verde
+r_bin_colors <- c(adjustcolor("#ffffff", alpha.f=0.0), adjustcolor("#01781b", alpha.f=0.7))
+plot(r_bin, col=r_bin_colors, legend=FALSE, add=TRUE)
+plot(st_geometry(pts), add=TRUE, pch=21, col="white", bg="#ec0f01", cex=0.8, lwd=0.5)
+
+dev.off()
+cat("Mapas regenerados con éxito incluyendo Sudamérica de fondo.\n")
 
 message('\n✅ R pipeline complete.')

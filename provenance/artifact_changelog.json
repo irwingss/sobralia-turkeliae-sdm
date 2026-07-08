@@ -1,5 +1,40 @@
 [
   {
+    "artifactId": 2793,
+    "title": "o5_areas_comparacion.png",
+    "type": "image",
+    "totalVersions": 3,
+    "versions": [
+      {
+        "version": 1,
+        "contentHash": "ecf52937f26648ad25f0e109bad90eef43b430c508d97b007bdf0f5b8c5a238a",
+        "editSource": "baseline",
+        "editPrompt": "Versión original",
+        "aiModel": null,
+        "parentVersion": null,
+        "createdAt": "2026-07-08T04:10:57.906+00:00"
+      },
+      {
+        "version": 2,
+        "contentHash": "eafa0f6f000bfa66e2dd8af6cf7764e3bce9745ee9e16ca3a5a5172ff5136447",
+        "editSource": "figure_chat",
+        "editPrompt": "El gráfico debe estar en inglés todos sus textos. Además, veo que el mapa se sale del borde de su contenedor, como que no hace clip. Corrige",
+        "aiModel": null,
+        "parentVersion": "08d37d7c-3bf6-4442-bbad-b84267b22b32",
+        "createdAt": "2026-07-08T04:10:58.576+00:00"
+      },
+      {
+        "version": 3,
+        "contentHash": "fe52d0bbc0413754f97349cf6e65ed1290240e7e9187cb562ca0b2af719de0d7",
+        "editSource": "figure_chat",
+        "editPrompt": null,
+        "aiModel": null,
+        "parentVersion": "1b46b089-d14f-44da-8258-dc0ea28793fd",
+        "createdAt": "2026-07-08T04:11:42.949+00:00"
+      }
+    ]
+  },
+  {
     "artifactId": 2780,
     "title": "o5_response_curves.png",
     "type": "image",

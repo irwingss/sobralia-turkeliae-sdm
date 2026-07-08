@@ -1,6 +1,6 @@
-# Modelado de nicho ecológico de *Sobralia turkeliae*
+# Modelado de nicho ecológico de Sobralia turkeliae
 
-> Research Package generado por **[Ressearch AI](https://ressearchai.app)** · 2026-07-07T16:35:16.411+00:00
+> Research Package generado por **[Ressearch AI](https://ressearchai.app)** · 2026-07-08T05:21:50.528+00:00
 
 
 > ⚠️ **Paquete incompleto**: 1 archivo(s) no se pudo(eron) incluir.
@@ -17,7 +17,7 @@ Marco normativo aplicable: **Ley N.° 31814** (Perú) y su Reglamento **Decreto 
 
 ## Pregunta de investigación
 
-OK Modelado de nicho ecológico de Sobralia turkeliae
+Modelado de nicho ecológico de Sobralia turkeliae
 
 ## Objetivos
 
@@ -40,11 +40,11 @@ OK Modelado de nicho ecológico de Sobralia turkeliae
 | `Makefile` | `make reproduce` corre todo el pipeline |
 | `Dockerfile` | Contenedor reproducible (`make docker-run`) |
 | `code/pipeline.py` | Pipeline Python (2 ejecución(es)) |
-| `code/pipeline.R` | Pipeline R (19 ejecución(es)) |
+| `code/pipeline.R` | Pipeline R (23 ejecución(es)) |
 | `code/executions/` | Scripts individuales por ejecución |
 | `code/execution_log.jsonl` | Log estructurado (uno-por-línea) |
-| `figures/` | 7 figura(s) |
-| `tables/` | 2 tabla(s) |
+| `figures/` | 9 figura(s) |
+| `tables/` | 4 tabla(s) |
 | `databases/` (canvas) | 5 dataset artifact(s) |
 | `RESSEARCH_AGENTS.md` | Constitución + journal del agente |
 | `provenance/` | Grafo PROV-O + changelog de artifacts |
